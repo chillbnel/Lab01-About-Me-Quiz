@@ -9,7 +9,8 @@ namespace Lab01_About_Me_Quiz
             Question1(); //calls the method for the first question; method returns a boolean
             Question2(); //calls the method for the second question; method returns a boolean
             Question3(); //calls the method for the third question; method returns an int
-            Question4(); //calls the method for the third question; method returns a string
+            Question4(); //calls the method for the fourth question; method returns a string
+            Question5(); //calls the method for the fifth question; method does not have a return
         }
 
         static bool Question1()
@@ -91,6 +92,16 @@ namespace Lab01_About_Me_Quiz
             } while (j < numberGuesses && !correctResponse.includes(userResponse)); //will continue until the user gets the correct anwser or runs out of the chances
 
             return userResponse; //returns the user's final guess
+        }
+
+        static void Question5()
+        {
+            string question = "Have I ever served in the Armed Forces? [True or False]";
+            string details = "I\'ve been a Combat Engineer in the U.S. Army Reserves for the last 15 years.  Had the opportunity to serve as a junior enlisted Soldier, a NCO, and an Officer both stateside and oversees.";
+
+            Console.WriteLine(question); //asks the user a question in the console
+            string userResponse = Console.ReadLine().ToLower(); //takes user response, converts it to lower case and then stores it locally
+            Console.WriteLine(details);// displays the correct anwser with context to the user
         }
     }
 }
